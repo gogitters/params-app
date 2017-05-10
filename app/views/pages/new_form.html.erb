@@ -1,0 +1,16 @@
+<h1>Form:</h1>
+
+<%= form_tag "/form_result", method: :post do %>
+  Message: <input type="text" name="message_param">
+  <input type="submit" value="Please click me">
+<% end %>
+
+<%= form_tag "/form_result", method: :post do %>
+  Message: <%= text_field_tag :message_param %>
+  <%= submit_tag "Please click me" %>
+<% end %>
+<!-- <form action="/form_result" method="post">
+  Message: <input type="text" name="message_param">
+  <input type="submit" value="Please click me">
+</form>
+ -->

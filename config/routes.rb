@@ -5,4 +5,10 @@ Rails.application.routes.draw do
   get "/guess_a_number/:number", to: 'pages#guess_number_method'
   get "/url_segment", to: 'pages#test'
   get "/url_segment/:purple_hippo", to: 'pages#url_seg_method'
+
+  get "/form", to: 'pages#form_method'
+  post "/form_result", to: 'pages#form_result_method'
+
+  get "/guess_number_form", to: 'pages#number_form_method'
+  post "/guess_number_result", to: 'pages#guess_number_method'
 end

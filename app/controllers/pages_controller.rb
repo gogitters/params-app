@@ -36,16 +36,26 @@ class PagesController < ApplicationController
     elsif @guessed_number < number
       @message = "Too low! Try again."
     end
+    @foo = "Try again!!!!!!!"
     render "guess_number.html.erb"
   end
 
-  def test
-    render "url_segment_page.html.erb"
+  def number_form_method
+    render "numbers_game_form.html.erb"
   end
 
   def url_seg_method
     @message = params[:purple_hippo]
     @message2 = params[:query_param]
     render "url_segment_page.html.erb"
+  end
+
+  def form_method
+    render "new_form.html.erb"
+  end
+
+  def form_result_method
+    @message = params[:message_param]
+    render "form_result.html.erb"
   end
 end
