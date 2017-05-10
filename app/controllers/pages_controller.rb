@@ -38,4 +38,14 @@ class PagesController < ApplicationController
     end
     render "guess_number.html.erb"
   end
+
+  def test
+    render "url_segment_page.html.erb"
+  end
+
+  def url_seg_method
+    @message = params[:purple_hippo]
+    @message2 = params[:query_param]
+    render "url_segment_page.html.erb"
+  end
 end
